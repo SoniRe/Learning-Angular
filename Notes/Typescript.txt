@@ -1,0 +1,8 @@
+Introduction to Typescript (Whole idea is to provide type safety)
+
+- Strongly typed language
+- Superset of Javascript
+- Typescript compiles to Javascript
+- Keep application free from type errors
+- Keep JS code from undefined and null values
+

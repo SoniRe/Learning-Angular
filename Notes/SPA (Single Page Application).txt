@@ -1,0 +1,7 @@
+SPA stands for Single Page Application
+
+- Every resource will be send to client machine and won't reload and only make call 
+  when fetching data using API
+- SPA does not make requests to server for every URL requests
+- Angular has routing functionality to create SPA
+- Angular also offers SSR(Server Side Rendering) which supports SPA

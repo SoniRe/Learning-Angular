@@ -1,0 +1,4 @@
+Typescript has the ability to determine type of variable from value which you give called type 
+inference
+
+52:00++

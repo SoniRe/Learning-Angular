@@ -1,0 +1,25 @@
+- UI Framework built by Google
+- Component Based Framework for building scalable app
+- Provided collection of libraries to cover features like Routing, Forms.
+
+Components like Header, Footer same as React
+
+Framework vs Libraries
+
+Framework
+
+- Framework generally contains set of libraries
+- You can extend frameworks
+- Example - Angular, Express JS
+
+Libraries
+
+- Libraries generally perform specific operations
+- You can combine multiple libraries
+- Example - React, Lodash
+
+Features of Angular
+- Templates
+- Data Binding
+- PWA (Basically installing a website)
+- Routing
