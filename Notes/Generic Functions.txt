@@ -1,0 +1,5 @@
+// Generics
+function getItems<Type>(items: Type[]): Type[] {
+  return new Array<Type>().concat(items);
+}
+

@@ -1,0 +1,44 @@
+class Employee {
+  // To make variable private use #id
+
+  #id: number;
+  protected name: string;
+  address: string;
+
+  constructor(id: number, name: string, address: string) {
+    this.#id = id;
+    this.name = name;
+    this.address = address;
+  }
+
+  // Class Methods
+  getNameWithAddress(): string {
+    return this.name + " from " + this.address;
+  }
+
+  static getEmployeeCount(): number {
+    return 50;
+  }
+
+  // Getter
+  get empId(): number {
+    return this.#id;
+  }
+
+  //Setter
+  set empId(id: number) {
+    this.#id = id;
+  }
+}
+
+class Manager extends Employee {
+  constructor(id: number, name: string, address: string) {
+    super(id, name, address);
+  }
+
+  getName(): string {
+    return this.name;
+  }
+}
+
+
