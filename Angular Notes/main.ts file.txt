@@ -1,0 +1,5 @@
+We Want to run AppComponent with appConfiguration and if something happens display the error message
+
+bootstrapApplication(AppComponent, appConfig).catch((err) =>
+  console.error(err)
+);

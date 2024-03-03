@@ -13,6 +13,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Employee {
     constructor(id, name, address) {
         // To make variable private use #id
@@ -20,6 +21,13 @@ class Employee {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
         this.name = name;
         this.address = address;
+    }
+    Login() {
+        return {
+            name: "John",
+            id: 1,
+            email: "",
+        };
     }
     // Class Methods
     getNameWithAddress() {
@@ -65,3 +73,4 @@ let Mike = new Manager(1, "Mike", {
     pin: "50076",
 });
 console.log(Mike.getName());
+//# sourceMappingURL=Classes.js.map

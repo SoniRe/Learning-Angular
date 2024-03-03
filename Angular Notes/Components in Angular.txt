@@ -1,0 +1,19 @@
+Components are basically group of html, css and ts files that work together
+to form a visual component
+
+Component is a collection of 4 files
+
+1) app.component.ts
+2) app.component.spec.ts // Only used for testing
+3) app.component.html
+4) app.component.css
+
+A component can be header, footer, profile picture or side menu
+
+@Component({
+  selector: 'app-home', // We can use this 'app-home' selector to use anywhere 
+  standalone: true,
+  imports: [],
+  templateUrl: './home.component.html', // This is the HTML file that will be loaded
+  styleUrl: './home.component.css' // This is the CSS file that will be applied
+})

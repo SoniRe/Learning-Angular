@@ -1,0 +1,3 @@
+Static Site Generation (SSG) is a technique used in web development where websites are pre-rendered at build time rather than dynamically generated on the server or client side. Let’s dive into the details:
+
+Can push to CDN so you get HTML, CSS, JS files without processing

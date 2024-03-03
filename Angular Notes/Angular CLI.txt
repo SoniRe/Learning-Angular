@@ -1,0 +1,21 @@
+ng --version // To find version
+
+"ng" stands for "Angular
+
+ng new tutorialapp // To create a new Angular app
+
+-> Can create multiple projects in single workspace
+
+ng serve -o // To build and server Angular application locally
+
+1) ng serve: This part initiates the development server. It compiles your Angular application 
+   and hosts it locally so you can view it in a web browser. The server watches for changes in your 
+   code and automatically rebuilds the application when you save any files.
+
+2) -o or --open: This flag opens the application in your default web browser once the server is
+   up and running. It’s a convenient way to immediately see your changes without manually navigating 
+   to the local server URL.
+
+ng build --configuration production // To build the project for production
+
+ng generate component home // Generates a new component named home

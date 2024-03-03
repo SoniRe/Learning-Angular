@@ -1,0 +1,1 @@
+Jasmine is a Test Framework while Karma is a test runner

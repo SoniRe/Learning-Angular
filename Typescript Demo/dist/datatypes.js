@@ -32,3 +32,4 @@ function swapNumbers(num1, num2) {
 swapNumbs = swapNumbers(10, 20);
 swapNumbs[0];
 // Don't use any
+//# sourceMappingURL=datatypes.js.map

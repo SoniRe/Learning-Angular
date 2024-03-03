@@ -1,11 +1,15 @@
 // Write Class Name in Pascal case
 // ! Mark to avoid error example id!: number
 
-// Cam have either default or parametrized constructor
+// Can have either default or parametrized constructor
 
 // Private Variable visible inside class
 // Protected Variable visible inside class and inherited class
 // Public
+import { Login, User } from "./interfaces";
+
+// import * as UserLogn from "./interfaces"
+
 interface Address {
   street: string;
   city: string;
@@ -13,7 +17,7 @@ interface Address {
   pin: string;
 }
 
-class Employee {
+class Employee implements Login {
   // To make variable private use #id
 
   #id: number;
@@ -24,6 +28,14 @@ class Employee {
     this.#id = id;
     this.name = name;
     this.address = address;
+  }
+
+  Login(): User {
+    return {
+      name: "John",
+      id: 1,
+      email: "",
+    };
   }
 
   // Class Methods
