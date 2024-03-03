@@ -1,0 +1,1 @@
+No need for modules to use Component we can use one Component into another

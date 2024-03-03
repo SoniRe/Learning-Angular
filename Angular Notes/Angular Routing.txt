@@ -1,2 +1,0 @@
-In Angular, routing allows us to load specific components or modules when accessing routes
-like /home or /dashboard/menu

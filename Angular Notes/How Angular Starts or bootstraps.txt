@@ -1,0 +1,40 @@
+Searches for main.ts (Entry file)
+
+bootstrapApplication() -> means start the application 
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+
+Here it will pick the angular code and inject it into HTML where you have written like
+<app-root>
+
+// Interpolation
+It is injecting values into your HTML 
+<h4>{{name}}</h4>
+
+from 
+
+export class UserProfileComponent {
+  name = 'Aditya';
+  status = 'male';
+  salary = 1000000;
+  isBtnDisabled = true;
+
+  onChange(e: Event) {
+    const value = (e.target as HTMLInputElement).value; // Telling typescript e.target is HTML input 	element	 
+    console.log('on chnage event called', value);
+  }
+}
+
+// Property Binding
+Injecting into property
+<button [disabled]="isBtnDisabled">Click</button>
+
+
+// Event Binding
+<input type="text" (input)="onChange($event)" />
+
+In Angular don't have to use on before any function call
+onInput - The oninput event occurs when the value of an <input> or <textarea> element is changed.
+
+

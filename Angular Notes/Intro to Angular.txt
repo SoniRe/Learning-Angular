@@ -1,3 +1,4 @@
+//Component
 Components are basically group of html, css and ts files that work together
 to form a visual component
 
@@ -17,3 +18,15 @@ A component can be header, footer, profile picture or side menu
   templateUrl: './home.component.html', // This is the HTML file that will be loaded
   styleUrl: './home.component.css' // This is the CSS file that will be applied
 })
+
+//Routing
+In Angular, routing allows us to load specific components or modules when accessing routes
+like /home or /dashboard/menu
+
+bootstrapApplication(AppComponent, appConfig).catch((err) =>
+  console.error(err)
+);
+
+
+// Tests in Angular
+Jasmine is a Test Framework while Karma is a test runner
