@@ -19,3 +19,5 @@ ng serve -o // To build and server Angular application locally
 ng build --configuration production // To build the project for production
 
 ng generate component home // Generates a new component named home
+
+ng generate pipe pipes/countryCode // Generates pipe inside pipes folder named countryCode

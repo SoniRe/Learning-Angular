@@ -37,4 +37,5 @@ Injecting into property
 In Angular don't have to use on before any function call
 onInput - The oninput event occurs when the value of an <input> or <textarea> element is changed.
 
+43:00
 

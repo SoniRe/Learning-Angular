@@ -1,0 +1,15 @@
+ onChange(e: Event) {
+    const value = (e.target as HTMLInputElement).value;
+    // console.log('on chnage event called', value);
+    this.inputVal = value;
+  }
+
+In HTML
+<h1>input value - {{ inputVal }}</h1>
+<input type="text" [value]="inputVal" (input)="onChange($event)" />
+
+or
+
+// Banana in the box 
+// Achieving 2 Way data binding
+<input type="text" [(ngModel)]="inputVal" />

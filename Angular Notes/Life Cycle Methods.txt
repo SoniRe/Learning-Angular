@@ -1,0 +1,23 @@
+When Component is created some methods are automatically created
+
+// Only class instance has been created
+constructor() {
+  //initializing properties
+  // dependency injection
+  // event listener
+}
+
+// Multiple times called or it is called whenever changes happen
+ngOnChanges(changes: SimpleChanges): void {
+   console.log(changes);
+}
+
+// Component is ready at this point so values can be used in the component
+ngOnInit() {
+    console.log('ngOnInit called');
+  }
+
+// It is for cleaup ot Unregister Event listener
+  ngOnDestroy() {
+    console.log('ngOnDestroy is called');
+  }

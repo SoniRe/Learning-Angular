@@ -1,0 +1,31 @@
+<div>
+  <!-- Control Flow syntax -->
+  @for(user of users; track user.name) {
+  <h4>
+    Name - {{ user.name }} <br />
+    Salary - {{ user.sal }}
+  </h4>
+  }
+</div>
+
+
+Directive - Inbuilt classes which can be used to enhance/change element behaviour
+
+<!-- Directives -->
+<div *ngFor="let user of users">
+  <h4 *ngIf="user.sal > 10000; else elseBlock">
+    Name - {{ user.name }} <br />
+    Salary - {{ user.sal }}
+  </h4>
+
+  <ng-template #elseBlock>
+    <h4>
+      Name - {{ user.name }} <br />
+      Salary - {{ user.sal }}
+    </h4>
+  </ng-template>
+</div>
+
+Two types of directive :-
+1) Structural Directive 
+2) Attribute Directive

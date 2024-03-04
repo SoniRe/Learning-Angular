@@ -1,0 +1,14 @@
+Parent HTML
+
+<app-user-profile userName="aditya"></app-user-profile>
+<app-user-profile userName="prabhu"></app-user-profile>
+<app-user-profile userName="pokemon"></app-user-profile>
+
+Child Component File
+
+export class UserProfileComponent {
+  @Input({ alias: 'userName', transform: formatName }) name = '';
+}
+
+Child HTML File
+<h1>Name - {{ name }}</h1>

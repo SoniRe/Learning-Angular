@@ -1,0 +1,19 @@
+In Child's HTML 
+
+<button (click)="sendData()">Send Data</button>
+
+
+In Child's Component Class
+ sendData() {
+    this.myEvent.emit("Coder's never quit");
+ }
+
+In Parent HTML
+<app-user-profile
+  (myEvent)="receivedData($event)"
+></app-user-profile>
+
+In Parent's Component
+ receivedData(e: string) {
+    console.log(e);
+  }

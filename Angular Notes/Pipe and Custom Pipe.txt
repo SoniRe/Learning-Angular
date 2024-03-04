@@ -1,0 +1,18 @@
+(Basically for styling the text nicely 💖)
+
+Use pipes to transform strings, currency amounts, dates, and other data for display.
+
+In HTML, just have to write
+<h3> Name - {{ name | uppercase }} <h3 />
+
+Custom Pipes can also be created
+
+transform(value: unknown, ...args: unknown[]): unknown {
+    return '+91' + value; // This is the return value change we wanted
+ }
+
+In HTML
+
+<h3>
+  Phone Number {{ phone | countryCode : "Arguement 1" : "Arguement 2" }} // Custom Pipe
+</h3>
