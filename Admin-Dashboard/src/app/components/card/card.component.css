@@ -1,0 +1,39 @@
+.card {
+  height: 9vw;
+  width: 20vw;
+  padding: 1vw;
+  border: 2px solid #e6e2fe;
+  border-radius: 0.5vw;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.card-top-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.card-top-left i {
+  font-size: 1.3vw;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: blueviolet;
+  color: white;
+}
+
+.card-bottom {
+  height: 50%;
+  width: 100%;
+}
+
+.card-bottom h2 {
+  margin-top: 0.5vw;
+}

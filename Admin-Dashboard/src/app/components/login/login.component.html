@@ -1,0 +1,35 @@
+<div id="login">
+  <div id="login-left">
+    <h1>LOGIN</h1>
+    <p>Go Ahead and View Our Admin Pannel</p>
+
+    <form [formGroup]="loginForm">
+      <div class="input-box">
+        <i class="ri-user-3-line"></i>
+        <input type="email" placeholder="Email Address" [formControl]="email" />
+      </div>
+      <h5 [hidden]="email.valid || email.untouched">Enter Correct Email</h5>
+
+      <div class="input-box">
+        <i class="ri-lock-line"></i>
+        <input
+          type="password"
+          placeholder="Password"
+          [formControl]="password"
+        />
+      </div>
+      <h5 [hidden]="password.valid || password.untouched">
+        Password reuired and must be 6 characters long
+      </h5>
+      <button (click)="login()">Login</button>
+    </form>
+
+    <div id="bottom">
+      <p>Haven't Registered Already?</p>
+      <a routerLink="/signup"> Register Now</a>
+    </div>
+  </div>
+  <div id="login-right">
+    <img src="./../../../assets/images/LOGO.png" alt="" />
+  </div>
+</div>

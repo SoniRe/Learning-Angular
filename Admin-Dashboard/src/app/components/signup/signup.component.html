@@ -1,0 +1,39 @@
+<div id="signup">
+  <div id="signup-box">
+    <h1>REGISTER</h1>
+    <p>Register Now and Get Access to our Admin Pannel</p>
+
+    <form [formGroup]="signupform">
+      <div class="input-box">
+        <i class="ri-user-3-line"></i>
+        <input type="text" placeholder="Name" [formControl]="name" />
+      </div>
+      <h5 [hidden]="name.valid || name.untouched">Enter Name Properly</h5>
+
+      <div class="input-box">
+        <i class="ri-mail-line"></i>
+        <input type="email" placeholder="Email Address" [formControl]="email" />
+      </div>
+      <h5 [hidden]="email.valid || name.untouched">Enter Correct Email</h5>
+
+      <div class="input-box">
+        <i class="ri-lock-line"></i>
+        <input
+          type="password"
+          placeholder="Password"
+          [formControl]="password"
+        />
+      </div>
+      <h5 [hidden]="password.valid || password.untouched">
+        Password reuired and must be 6 characters long
+      </h5>
+
+      <button (click)="signup()">Signup</button>
+    </form>
+
+    <div id="bottom">
+      <p>Already a member then</p>
+      <a routerLink="/login">Sign In</a>
+    </div>
+  </div>
+</div>

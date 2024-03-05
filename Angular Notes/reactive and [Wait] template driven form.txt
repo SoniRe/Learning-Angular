@@ -1,0 +1,25 @@
+Reactive Form - Write most of the code in TS file
+Template Driven Form - Wrie most of code in Template (HTML)
+
+Reactive Form
+// Main work in TS file
+export class LoginComponent {
+  email = new FormControl('', [Validators.required, Validators.email]);
+
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(6),
+  ]);
+
+  loginForm = new FormGroup({
+    email: this.email,
+    password: this.password,
+  });
+
+  login() {
+    console.log(this.loginForm.value);
+  }
+}
+
+Remaining work in HTML file
+

@@ -1,0 +1,27 @@
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  border-radius: 5vw;
+}
+
+i {
+  font-size: 2vw;
+  color: white;
+}
+
+a {
+  padding: 1vw;
+  border-radius: 5vw;
+}
+
+a:hover {
+  background-color: #fff;
+}
+
+a:hover i {
+  color: blueviolet;
+}
