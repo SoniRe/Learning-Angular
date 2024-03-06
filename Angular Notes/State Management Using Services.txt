@@ -1,0 +1,28 @@
+To manage global state we can use services
+
+// Same data that needed everywhere it can be done using global state
+
+// In Counter Service
+export class CounterService {
+// Here count is our global variable and it can be anything 
+ private count = 0;
+
+  getCounter() {
+    return this.count;
+  }
+
+  incrementCounter() {
+    this.count++;
+  }
+}
+
+
+// In Component TS file
+  constructor(public counter: CounterService) {}
+
+// In HTML
+<p>Count: {{ counter.getCounter() }}</p>
+<button (click)="counter.incrementCounter()">Increment</button>
+
+// To seperate instance of gloabal varibale we can use provider inside TS file
+providers: [CountService]

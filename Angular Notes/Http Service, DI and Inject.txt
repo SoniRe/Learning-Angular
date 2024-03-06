@@ -1,0 +1,40 @@
+Service - To make network request or making request to remote server we write out code in services
+We can do authentication in Component also but thats not the recommended way
+
+1) Make Network calls or API calls
+2) Make Global varibales just like redux store
+
+Example - User is doing auth which will do get request then it will be written in services
+
+@Injectable({
+  providedIn: 'root',
+})
+
+// Provided in root means we can use anywhere in the program
+
+http: HttpClient;
+  constructor(http: HttpClient) {
+    this.http = http;
+  }
+
+or
+
+constructor(private http: HttpClient) {} // This syntax is dependency injection
+
+or 
+
+private http = inject(HttpClient);
+
+// This line below returns an observalble
+this.http.get('https://api.chucknorris.io/jokes/random?category=dev');
+
+
+Subsribe is just like then
+
+  getJoke() {
+    this.http
+      .get('https://api.chucknorris.io/jokes/random?category=dev')
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
