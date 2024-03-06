@@ -25,3 +25,9 @@ a:hover {
 a:hover i {
   color: blueviolet;
 }
+
+@media (max-width: 600px) {
+  #sidebar {
+    display: none;
+  }
+}

@@ -5,17 +5,18 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
 })
 export class SignupComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   name = new FormControl('', [Validators.required, Validators.minLength(3)]);
 
@@ -33,8 +34,17 @@ export class SignupComponent {
   });
 
   signup() {
-    console.log(this.signupform.value);
+    // console.log(this.signupform.value);
+
+    const email = this.signupform.value.email;
+    const password = this.signupform.value.password;
+
+    // Signup process
+    if (email && password) {
+      this.authService.registerUser(email, password);
+    }
+
     // Signup successful
-    this.router.navigate(['dashboard']);
+    // this.router.navigate(['dashboard']);
   }
 }

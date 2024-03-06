@@ -7,6 +7,7 @@ import { SearchComponent } from './components/search/search.component';
 import { UserComponent } from './components/user/user.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { InfoComponent } from './components/info/info.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
@@ -24,6 +25,7 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
+    canActivate: [authGuard],
     children: [
       {
         path: '',

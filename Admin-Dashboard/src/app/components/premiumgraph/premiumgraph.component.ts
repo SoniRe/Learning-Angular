@@ -9,7 +9,14 @@ import { Chart, ChartModule } from 'angular-highcharts';
   styleUrl: './premiumgraph.component.css',
 })
 export class PremiumgraphComponent {
+  height = innerWidth < 600 ? innerHeight * 0.5 : innerHeight * 0.6;
+  width = innerWidth < 600 ? innerWidth * 0.8 : innerWidth * 0.4;
+
   chart = new Chart({
+    chart: {
+      height: this.height,
+      width: this.width,
+    },
     title: {
       text: 'Premium Equivalent',
       align: 'left',

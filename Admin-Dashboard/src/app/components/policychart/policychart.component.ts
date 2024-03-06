@@ -9,10 +9,14 @@ import { Chart, ChartModule } from 'angular-highcharts';
   styleUrl: './policychart.component.css',
 })
 export class PolicychartComponent {
+  height = innerWidth < 600 ? innerHeight * 0.5 : innerHeight * 0.6;
+  width = innerWidth < 600 ? innerWidth * 0.8 : innerWidth * 0.4;
+
   chart = new Chart({
     chart: {
       type: 'line',
-      height: 425,
+      height: this.height,
+      width: this.width,
     },
     title: {
       text: 'Policy Charges',

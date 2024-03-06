@@ -37,3 +37,23 @@
 .card-bottom h2 {
   margin-top: 0.5vw;
 }
+
+@media (max-width: 600px) {
+  .card {
+    height: 10vh;
+    width: 35vw;
+    text-align: center;
+  }
+
+  .card-bottom h2 {
+    font-size: 4vw;
+  }
+
+  .card-top-left i {
+    display: none;
+  }
+
+  .card-top-right {
+    display: none;
+  }
+}
