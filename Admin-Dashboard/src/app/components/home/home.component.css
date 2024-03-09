@@ -1,0 +1,88 @@
+#menu i {
+  font-size: 1.5vw;
+  padding: 0.7vw;
+  border-radius: 50%;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+
+#menu i:hover {
+  background-color: #b1b1b1;
+}
+
+#dashboard {
+  min-height: 100vh;
+  width: 82vw;
+  padding-top: 2vw;
+}
+
+#main-dashboard {
+  padding-top: 1vw;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3vw;
+  margin-right: 7.5vw;
+}
+
+#header-right i {
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  cursor: pointer;
+}
+
+#header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+#header-right img {
+  height: 2.8vw;
+  border-radius: 50%;
+}
+
+#multi-card {
+  margin-top: 2vw;
+  display: flex;
+  gap: 1vw;
+  margin: 1vw 3vw;
+}
+
+#chart-column {
+  margin-top: 2vw;
+  margin-left: 3vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+@media (max-width: 600px) {
+  #dashboard {
+    padding: 0;
+  }
+
+  #main-dashboard {
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header-right {
+    display: none;
+  }
+
+  #multi-card {
+    overflow-x: auto;
+    margin: 4vw 0;
+  }
+
+  #chart-column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

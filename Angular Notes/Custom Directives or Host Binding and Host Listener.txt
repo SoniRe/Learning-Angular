@@ -1,0 +1,11 @@
+ng generate directive directives/theme
+
+<h1 [app-highlight]>Hello</h1>
+
+ @HostBinding('style')
+  bgColor = 'red'
+
+ @HostListener('click')
+  changeDarkMode() {
+    console.log('clicked');
+  }

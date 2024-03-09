@@ -10,16 +10,20 @@ import { Chart, ChartModule } from 'angular-highcharts';
 })
 export class PremiumgraphComponent {
   height = innerWidth < 600 ? innerHeight * 0.5 : innerHeight * 0.6;
-  width = innerWidth < 600 ? innerWidth * 0.8 : innerWidth * 0.4;
+  width = innerWidth < 600 ? innerWidth * 0.7 : innerWidth * 0.35;
 
   chart = new Chart({
     chart: {
       height: this.height,
       width: this.width,
+      backgroundColor: '',
     },
     title: {
       text: 'Premium Equivalent',
       align: 'left',
+      style: {
+        color: '#EE82EE',
+      },
     },
     credits: {
       enabled: false,
@@ -36,6 +40,24 @@ export class PremiumgraphComponent {
         'Aug',
         'Sep',
       ],
+      labels: {
+        style: {
+          color: '#EE82EE',
+        },
+      },
+    },
+    yAxis: {
+      title: {
+        text: 'Premium in $',
+        style: {
+          color: 'violet',
+        },
+      },
+      labels: {
+        style: {
+          color: 'violet',
+        },
+      },
     },
     series: [
       {

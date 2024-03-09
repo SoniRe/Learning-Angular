@@ -6,8 +6,10 @@ import { BookmarkComponent } from './components/bookmark/bookmark.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserComponent } from './components/user/user.component';
 import { StatsComponent } from './components/stats/stats.component';
-import { InfoComponent } from './components/info/info.component';
+// import { InfoComponent } from './components/info/info.component';
 import { authGuard } from './auth.guard';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +27,7 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
+    component: DashboardComponent,
     canActivate: [authGuard],
     children: [
       {
@@ -34,7 +37,7 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        component: DashboardComponent,
+        component: HomeComponent,
       },
       {
         path: 'bookmark',
@@ -54,8 +57,15 @@ export const routes: Routes = [
       },
       {
         path: 'info',
-        component: InfoComponent,
+        loadComponent: () =>
+          import('./components/info/info.component').then(
+            (mod) => mod.InfoComponent
+          ),
       },
     ],
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Chart, ChartModule } from 'angular-highcharts';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-policychart',
@@ -9,28 +10,48 @@ import { Chart, ChartModule } from 'angular-highcharts';
   styleUrl: './policychart.component.css',
 })
 export class PolicychartComponent {
+  constructor() {}
+
   height = innerWidth < 600 ? innerHeight * 0.5 : innerHeight * 0.6;
-  width = innerWidth < 600 ? innerWidth * 0.8 : innerWidth * 0.4;
+  width = innerWidth < 600 ? innerWidth * 0.7 : innerWidth * 0.35;
 
   chart = new Chart({
     chart: {
       type: 'line',
       height: this.height,
       width: this.width,
+      backgroundColor: '',
     },
     title: {
       text: 'Policy Charges',
       align: 'left',
+      style: {
+        color: '#2CAFFE',
+      },
     },
     credits: {
       enabled: false,
     },
     xAxis: {
       categories: ['Jan', 'Feb', 'March', 'May', 'Jun', 'July'],
+      lineColor: '',
+      labels: {
+        style: {
+          color: '#2CAFFE',
+        },
+      },
     },
     yAxis: {
       title: {
         text: 'Revenue in $',
+        style: {
+          color: '#2CAFFE',
+        },
+      },
+      labels: {
+        style: {
+          color: '#2CAFFE',
+        },
       },
     },
     series: [

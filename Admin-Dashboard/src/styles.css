@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: gilroy;
   src: url(assets/font/Gilroy-Medium.ttf);
@@ -16,6 +20,7 @@ html,
 body {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 a {

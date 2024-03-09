@@ -1,0 +1,17 @@
+Signal of 2 types
+
+1) Writtable
+2) Readable
+
+private count = signal(0)
+
+this.count.set(5) //Use to make direct changes
+
+// To update state based on previous value
+this.count.update((oldVal) => {
+ return oldVal + 1
+})
+
+
+//Readable
+doubleCount: Signal<number> = computed(() => this.count() * 2)

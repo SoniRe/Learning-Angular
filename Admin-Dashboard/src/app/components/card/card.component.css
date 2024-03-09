@@ -1,6 +1,6 @@
 .card {
-  height: 9vw;
-  width: 20vw;
+  height: 18vh;
+  width: 17vw;
   padding: 1vw;
   border: 2px solid #e6e2fe;
   border-radius: 0.5vw;
@@ -24,7 +24,7 @@
 .card-top-left i {
   font-size: 1.3vw;
   border-radius: 3px;
-  padding: 5px;
+  padding: 3px 7px;
   background-color: blueviolet;
   color: white;
 }

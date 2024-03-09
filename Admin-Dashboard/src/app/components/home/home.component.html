@@ -1,0 +1,59 @@
+<div id="dashboard" class="dark:bg-slate-800">
+  <div (click)="toggleMenu()" id="menu" class="dark:text-white">
+    <i class="ri-menu-line"></i>
+  </div>
+
+  <div id="main-dashboard">
+    <div id="header">
+      <h1 class="text-3xl font-bold dark:text-white">Welcome Aditya 👋</h1>
+
+      <div id="header-right">
+        <button (click)="themeService.toggleLightMode()">
+          @if(themeService.isDarkMode()) {
+          <i class="ri-moon-line dark:text-white"></i>
+          } @else {
+          <i class="ri-sun-fill text-black"></i>
+          }
+        </button>
+
+        <i class="ri-discuss-line dark:text-white"></i>
+        <i class="ri-notification-line dark:text-white"></i>
+        <img src="./../../../assets/images/img.jpeg" alt="" />
+        <a (click)="authService.logout()"
+          ><i class="ri-logout-box-line dark:text-white"></i
+        ></a>
+      </div>
+    </div>
+
+    <div id="multi-card">
+      <app-card
+        className="ri-pass-valid-line"
+        cardName="Assured Amount"
+        money="238923"
+      ></app-card>
+
+      <app-card
+        className="ri-price-tag-3-line"
+        cardName="Policied Sold"
+        money="943234"
+      ></app-card>
+
+      <app-card
+        className="ri-shopping-bag-line"
+        cardName="Average Premium"
+        money="789734"
+      ></app-card>
+
+      <app-card
+        className="ri-discount-percent-line"
+        cardName="Total Premium"
+        money="88923"
+      ></app-card>
+    </div>
+
+    <div id="chart-column">
+      <app-policychart></app-policychart>
+      <app-premiumgraph></app-premiumgraph>
+    </div>
+  </div>
+</div>

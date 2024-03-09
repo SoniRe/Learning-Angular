@@ -1,0 +1,16 @@
+ {path: "**"}
+
+** - means anypath that matches
+Order will matter here. Will have to make it last
+
+Lazy Loading - Lazy loading is a web design technique that delays the loading of certain parts of a page until the user needs them. This can help speed up page load times
+
+Bundle can be split
+
+    {
+        path: 'info',
+        loadComponent: () =>
+          import('./components/info/info.component').then(
+            (mod) => mod.InfoComponent
+          ),
+      },

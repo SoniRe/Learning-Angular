@@ -1,46 +1,8 @@
-<app-sidebar></app-sidebar>
-<div id="dashboard">
-  <div id="main-dashboard">
-    <div id="header">
-      <h1>Welcome Aditya 👋</h1>
-
-      <div id="header-right">
-        <i class="ri-discuss-line"></i>
-        <i class="ri-notification-line"></i>
-        <img src="./../../../assets/images/img.jpeg" alt="" />
-        <a (click)="authService.logout()"><i class="ri-logout-box-line"></i></a>
-      </div>
-    </div>
-
-    <div id="multi-card">
-      <app-card
-        className="ri-pass-valid-line"
-        cardName="Assured Amount"
-        money="238923"
-      ></app-card>
-
-      <app-card
-        className="ri-price-tag-3-line"
-        cardName="Policied Sold"
-        money="943234"
-      ></app-card>
-
-      <app-card
-        className="ri-shopping-bag-line"
-        cardName="Average Premium"
-        money="789734"
-      ></app-card>
-
-      <app-card
-        className="ri-discount-percent-line"
-        cardName="Total Premium"
-        money="88923"
-      ></app-card>
-    </div>
-
-    <div id="chart-column">
-      <app-policychart></app-policychart>
-      <app-premiumgraph></app-premiumgraph>
-    </div>
-  </div>
+<div
+  class="flex min-h-[100vh] w-[100vw] relative"
+  [class.dark]="themeService.isDarkMode()"
+>
+  <app-sidebar></app-sidebar>
+  <router-outlet></router-outlet>
+  <app-settings></app-settings>
 </div>
