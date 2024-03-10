@@ -10,6 +10,8 @@ import { StatsComponent } from './components/stats/stats.component';
 import { authGuard } from './auth.guard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { Dashboard2Component } from './components/dashboard2/dashboard2.component';
+import { Dashboard3Component } from './components/dashboard3/dashboard3.component';
 
 export const routes: Routes = [
   {
@@ -28,6 +30,84 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [authGuard],
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+      {
+        path: 'bookmark',
+        component: BookmarkComponent,
+      },
+      {
+        path: 'search',
+        component: SearchComponent,
+      },
+      {
+        path: 'user',
+        component: UserComponent,
+      },
+      {
+        path: 'stats',
+        component: StatsComponent,
+      },
+      {
+        path: 'info',
+        loadComponent: () =>
+          import('./components/info/info.component').then(
+            (mod) => mod.InfoComponent
+          ),
+      },
+    ],
+  },
+  {
+    path: 'dashboard2',
+    component: Dashboard2Component,
+    canActivate: [authGuard],
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+      {
+        path: 'bookmark',
+        component: BookmarkComponent,
+      },
+      {
+        path: 'search',
+        component: SearchComponent,
+      },
+      {
+        path: 'user',
+        component: UserComponent,
+      },
+      {
+        path: 'stats',
+        component: StatsComponent,
+      },
+      {
+        path: 'info',
+        loadComponent: () =>
+          import('./components/info/info.component').then(
+            (mod) => mod.InfoComponent
+          ),
+      },
+    ],
+  },
+  {
+    path: 'dashboard3',
+    component: Dashboard3Component,
     canActivate: [authGuard],
     children: [
       {

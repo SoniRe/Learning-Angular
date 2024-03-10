@@ -1,11 +1,116 @@
 <div
-  class="fixed top-0 right-[-8%] min-h-[100vh] w-[10vw] z-10 bg-pink-300"
+  class="p-3 fixed top-0 right-[-8%] min-h-[100vh] w-[10.5vw] z-10 bg-white border-2 rounded-l-xl border-[#8A2BE2]"
   id="setting-menu"
 >
   <button
-    class="absolute top-[50%] -left-0 text-2xl p-2 bg-red-500 rounded-l-lg"
+    class="absolute top-[50%] -left-0 text-2xl p-2 bg-red-500 rounded-r-lg"
     (click)="toggleSetting()"
   >
-    <i class="ri-settings-2-line"></i>
+    <div class="animate-[spin_5s_linear_infinite]">
+      <i class="ri-settings-2-line"></i>
+    </div>
   </button>
+
+  <div
+    class="flex flex-col cursor-pointer mt-3"
+    (click)="layoutService.changeLayout(1)"
+    routerLink="/dashboard"
+  >
+    <div
+      class="flex h-20 rounded-md overflow-hidden border-2 hover:opacity-80 border-primary"
+      [class.border-blue-300]="layoutService.layoutChosen() === 1"
+    >
+      <div class="w-8 bg-gray-100 dark:bg-gray-800">
+        <div class="flex items-center mt-1 mx-1">
+          <div class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-700"></div>
+          <div
+            class="w-1 h-1 ml-auto rounded-full bg-gray-300 dark:bg-gray-700"
+          ></div>
+          <div
+            class="w-1 h-1 ml-0.5 rounded-full bg-gray-300 dark:bg-gray-700"
+          ></div>
+        </div>
+        <div
+          class="w-4 h-4 mt-2.5 mx-auto rounded-full bg-gray-300 dark:bg-gray-700"
+        ></div>
+        <div class="mt-2 mx-1 space-y-1">
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+        </div>
+      </div>
+      <div class="flex flex-col flex-auto border-l">
+        <div class="h-3 bg-gray-100 dark:bg-gray-800">
+          <div class="flex items-center justify-end h-full mr-2">
+            <div
+              class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-700"
+            ></div>
+          </div>
+        </div>
+        <div class="flex flex-auto border-t bg-gray-50 dark:bg-gray-900"></div>
+      </div>
+    </div>
+    <div
+      class="mt-2 text-md font-medium text-center text-secondary text-primary"
+    >
+      Jammu Dashboard
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col cursor-pointer mt-3"
+    (click)="layoutService.changeLayout(2)"
+    routerLink="/dashboard2"
+  >
+    <div
+      class="flex flex-col h-20 rounded-md overflow-hidden border-2 hover:opacity-80"
+      [class.border-blue-300]="layoutService.layoutChosen() === 2"
+    >
+      <div class="flex flex-col flex-auto bg-gray-50 dark:bg-gray-900"></div>
+    </div>
+    <div class="mt-2 text-md font-medium text-center text-secondary">
+      UP Dashboard
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col cursor-pointer mt-3"
+    (click)="layoutService.changeLayout(3)"
+    routerLink="/dashboard3"
+  >
+    <div
+      [class.border-blue-300]="layoutService.layoutChosen() === 3"
+      class="flex h-20 rounded-md overflow-hidden border-2 hover:opacity-80"
+    >
+      <div class="w-8 bg-gray-100 dark:bg-gray-800">
+        <div class="mt-3 mx-1.5 space-y-1">
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+          <div class="h-1 rounded-sm bg-gray-300 dark:bg-gray-700"></div>
+        </div>
+      </div>
+      <div class="flex flex-col flex-auto border-l">
+        <div class="h-3 bg-gray-100 dark:bg-gray-800">
+          <div class="flex items-center justify-end h-full mr-1.5">
+            <div
+              class="w-1 h-1 ml-1 rounded-full bg-gray-300 dark:bg-gray-700"
+            ></div>
+            <div
+              class="w-1 h-1 ml-1 rounded-full bg-gray-300 dark:bg-gray-700"
+            ></div>
+            <div
+              class="w-1 h-1 ml-1 rounded-full bg-gray-300 dark:bg-gray-700"
+            ></div>
+          </div>
+        </div>
+        <div class="flex flex-auto border-t bg-gray-50 dark:bg-gray-900"></div>
+      </div>
+    </div>
+    <div class="mt-2 text-md font-medium text-center text-secondary">
+      Jodhpur Dashboard
+    </div>
+  </div>
 </div>

@@ -1,0 +1,8 @@
+<div
+  class="flex min-h-[100vh] w-[100vw] relative"
+  [class.dark]="themeService.isDarkMode()"
+>
+  <app-sidebar3></app-sidebar3>
+  <router-outlet></router-outlet>
+  <app-settings></app-settings>
+</div>

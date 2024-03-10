@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import gsap from 'gsap';
 import { ThemeService } from '../../services/theme.service';
+import { LayoutService } from '../../services/layout.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,8 @@ import { ThemeService } from '../../services/theme.service';
 export class HomeComponent {
   constructor(
     public authService: AuthService,
-    public themeService: ThemeService
+    public themeService: ThemeService,
+    public layoutService: LayoutService
   ) {}
 
   isMenuOpen = signal(true);

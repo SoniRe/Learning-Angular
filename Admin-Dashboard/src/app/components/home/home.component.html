@@ -1,5 +1,10 @@
 <div id="dashboard" class="dark:bg-slate-800">
-  <div (click)="toggleMenu()" id="menu" class="dark:text-white">
+  <div
+    (click)="toggleMenu()"
+    id="menu"
+    class="dark:text-white"
+    [class.hidden]="layoutService.layoutChosen() === 1"
+  >
     <i class="ri-menu-line"></i>
   </div>
 
